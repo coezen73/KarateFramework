@@ -1,5 +1,6 @@
 @ignore
 Feature: Data driven tests
+
   Scenario Outline: get token for user <email>
     Given url 'https://cybertek-reservation-api-qa3.herokuapp.com/'
     And path 'sign'
@@ -12,12 +13,12 @@ Feature: Data driven tests
     And def token = response.accessToken
 
     Examples:
-  | email                       | password           |
-  | sbirdbj@fc2.com             | asenorval          |
-  | htwinbrowb4@blogspot.com    | kanyabang          |
-  | dfrederickb5@yellowbook.com | engraciahuc        |
-  | apainb6@google.co.jp        | rosettalightollers |
-  | fbawmeb7@studiopress.com    | sherilyngohn       |
+      | email                       | password           |
+      | sbirdbj@fc2.com             | asenorval          |
+      | htwinbrowb4@blogspot.com    | kanyabang          |
+      | dfrederickb5@yellowbook.com | engraciahuc        |
+      | apainb6@google.co.jp        | rosettalightollers |
+      | fbawmeb7@studiopress.com    | sherilyngohn       |
 
 
   Scenario Outline: get token for user <email>
@@ -32,13 +33,16 @@ Feature: Data driven tests
     And def token = response.accessToken
 
     Examples:
-  |read('data/users.csv')|
+      |read('data/users.csv')|
+
 
   Scenario: get user information verification(Database vs API)
+    # At the beginning, we need to handle with Database:
     * def DBUtils = Java.type('utilities.DBUtils')
     * def query = "select firstname,lastname,role from users where email = 'sbirdbj@fc2.com'"
     * def dbResult = DBUtils.getRowMap(query)
     * print 'DATABASE RESULT',dbResult
+    # First, we send a GET request to sign and point to retrieve the token
     Given url 'https://cybertek-reservation-api-qa3.herokuapp.com/'
     And path 'sign'
     And header Accept = 'application/json'
@@ -48,19 +52,18 @@ Feature: Data driven tests
     Then status 200
     And print response.accessToken
     And def token = response.accessToken
+    # We also send another request by using the token and getting the user information
     Given url 'https://cybertek-reservation-api-qa3.herokuapp.com/'
     And path 'api/users/me'
     And header Authorization = 'Bearer ' + token
     And header Accept = 'application/json'
     When method GET
     Then status 200
-    And print response
+    And print 'API RESULT' , response
+    # Lastly, we verify the information that we get both from Database and API:
     And match response.firstName == dbResult.firstname
     And match response.lastName == dbResult.lastname
     And match response.role == dbResult.role
-
-
-
 
 
   Scenario Outline: get user information verification(Database vs API) <email>

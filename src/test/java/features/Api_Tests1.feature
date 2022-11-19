@@ -1,4 +1,4 @@
-Feature: pet store api tests
+Feature:  api tests
 
   Scenario: basic test with status code validation
     Given url 'https://petstore.swagger.io/v2/store/inventory'
@@ -16,26 +16,18 @@ Feature: pet store api tests
     And match header Date == '#present'
     #this equals to headers().hasHeaderWithName("headername") in restassured
 
-
-
-
   Scenario: json body verification
     Given url 'https://petstore.swagger.io/v2/store/inventory'
     When method get
     Then status 200
+
     And match header Content-Type == 'application/json'
+    And match header Access-Control-Allow-Methods == 'GET, POST, DELETE, PUT'
     And print response
     And print response.Available
-    #verify base is EUR
-    And match response.Available == 13
-    And match response.roma == '#present'
 
-
-
-
-
-
-
+    And match response.string == '#present'
+    And match response.peric == '#number'
 
 
 

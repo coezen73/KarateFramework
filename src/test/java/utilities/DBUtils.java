@@ -60,7 +60,6 @@ public class DBUtils {
     public static Object getCellValue(String query) {
         return getQueryResultList(query).get(0).get(0);
     }
-
     /**
      *
      * @param query
