@@ -1,6 +1,6 @@
 Feature: Browser Functions
 
-  Scenario: Login and check the browser functions
+  Scenario: Login and check the browser functions testing1
 
     Given driver 'https://www.saucedemo.com/'
  # Setting the size(dimensions) of the browser:

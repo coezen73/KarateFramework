@@ -1,9 +1,10 @@
 Feature:  api tests
 
-  Scenario: basic test with status code validation
+  Scenario: Basic test with status code validation
     Given url 'https://petstore.swagger.io/v2/store/inventory'
     When method GET
     Then status 200
+
 
   Scenario: header verification
     Given url 'https://petstore.swagger.io/v2/store/inventory'

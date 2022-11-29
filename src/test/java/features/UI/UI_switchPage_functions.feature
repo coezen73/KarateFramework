@@ -5,7 +5,7 @@ Feature:SwitchPage function
 # We need to switch to a new tab and there, we might perform new functions or test case.
 # And we do these actions back and forth very often.
 
-  Scenario: Switching the pages by using switchPage function
+  Scenario: switchPage function testing
 
     Given driver 'https://training.rcvacademy.com/'
     * delay(5000)
@@ -27,6 +27,7 @@ Feature:SwitchPage function
     * switchPage(0)
     * delay(5000)
 
+#----------------------------------------------------------------------
 
  Scenario: Practice-Cybertek switchPage
    Given driver 'http://practice.cybertekschool.com/javascript_alerts'

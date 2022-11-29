@@ -3,8 +3,8 @@ Feature: Getting the title of the current page
   # driver.title --> get the current page title for matching:
   # Then match driver.title == 'Test Page'
   # We can also store it in variable and match it later.
-  @wip
-  Scenario: Switching the pages by using switchPage function
+
+  Scenario: Getting the Current page title testing
 
     Given driver 'https://training.rcvacademy.com/'
     * delay(5000)

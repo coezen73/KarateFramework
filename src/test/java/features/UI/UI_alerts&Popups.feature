@@ -2,8 +2,8 @@
 Feature: Handling Pop-ups
 # In Karate UI we have 2 arguments to deal with pop-ups:
 # 1) Cancel: * dialog(false), 2) Enter text and accept: * dialog(true, 'some text')
-
-Scenario: Handling pop-ups
+  @wip
+Scenario: Handling pop-ups testing
 
   Given driver 'http://practice.cybertekschool.com/javascript_alerts'
   * delay(2000)
@@ -31,8 +31,8 @@ Scenario: Handling pop-ups
 
 #------------------------------------------------------------------------------------------
 
-
-  Scenario: Handling Pop-ups, Exercise-2 Alert:
+  @wip
+  Scenario: Handling Pop-ups testing, Exercise-2 Alert:
 
     Given driver 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert'
     * delay(2000)
@@ -42,8 +42,8 @@ Scenario: Handling pop-ups
     * delay(2000)
     * dialog(false)
     * delay(2000)
-
-  Scenario: Handling Pop-ups, Exercise-3 confirm:
+  @wip
+  Scenario: Handling Pop-ups testing, Exercise-3 confirm:
 
     Given driver 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm'
     * delay(2000)
@@ -53,8 +53,8 @@ Scenario: Handling pop-ups
     * delay(2000)
     * dialog(false)
     * delay(2000)
-
-  Scenario: Handling Pop-ups, Exercise-4 Enter some text:
+  @wip
+  Scenario: Handling Pop-ups testing, Exercise-4 Enter some text:
 
     Given driver 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_prompt'
     * delay(2000)

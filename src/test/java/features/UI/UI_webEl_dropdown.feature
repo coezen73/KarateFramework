@@ -1,6 +1,6 @@
 Feature: WebElement  Functions
 
-  Scenario: WebElements - dropdown - select functions
+  Scenario: WebElements - dropdown/select functions testing
 # We can use these select() options only if we have 'plain-vanilla' drop boxes
 # If there is any 'enhanced' - based on JS, 'multi-select' we must use couple of clicks..
     Given driver 'https://www.salesforce.com/au/form/signup/freetrial-sales/?d=70130000000EqoP'

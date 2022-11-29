@@ -1,6 +1,6 @@
 Feature: WebElement  Functions
 
-  Scenario: WebElements - focus, input, clear and click(and or submit) functions
+  Scenario: WebElement functions testing
 
  # to be able to follow and see the actions, we add waiting time after each statement:
  # It is not a good practice. But we use it to observe the learning process

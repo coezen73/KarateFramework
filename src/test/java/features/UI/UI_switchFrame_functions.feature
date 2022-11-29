@@ -3,7 +3,7 @@ Feature: SwitchFrame Function
 # There might be a need in the app.you have an iframe within the webpage.
 # And there might be a webElement we want to reach which is there inside the iframe.
 
-  Scenario: Switching the frames by using switchFrame function
+  Scenario: switchFrame function testing
 
     Given driver 'http://practice.cybertekschool.com/iframe'
     * delay(2000)
@@ -11,14 +11,15 @@ Feature: SwitchFrame Function
 # switchFrame() method with locator:
     And switchFrame("//*[@id='mce_0_ifr']")
     * delay(2000)
-    And clear('#tinymce')
+    And clear("#tinymce")
     And input("//*[@id='tinymce']", "Hello everyone. Finally I made it!   ")
     * delay(5000)
  #  I couldn't get read of 'Your content goes here.' text.
 
 #-----------------------------------------------------------------------------------------------
 
-  Scenario: Switching Frames only by using Index Number:
+  Scenario: Switching Frames only by using Index Number testing
+
   * configure driver = {type:  'msedge'}
     Given driver 'https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe'
     * delay(2000)

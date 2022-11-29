@@ -4,7 +4,7 @@
 
 Feature:Browser - 'back, forward, reload and refresh' functions
 
-  Scenario: Login and play with the browser back and forth
+  Scenario: Login and play with the browser testing2
 
     Given driver 'https://karatelabs.github.io/karate/karate-core/'
     * delay(1000)

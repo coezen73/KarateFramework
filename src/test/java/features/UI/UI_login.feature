@@ -2,7 +2,7 @@
  Feature: Login Test
  This is Login Test
 
-Scenario: Login with valid login credential
+Scenario: Login with valid login credential testing
 
    Given driver 'https://www.saucedemo.com/'
 # we can inspect the page and get the locators in different variations like xPath:
@@ -20,7 +20,7 @@ Scenario: Login with valid login credential
  # (check documentation in Github karate UI):
 
 
-   Scenario: Login with valid login credential
+   Scenario: Login with valid login credential testing2
 # To specify the version of the browser(msedge) we use this line:
  * configure driver = {type : 'msedge'}
      Given driver 'https://www.saucedemo.com/'

@@ -1,7 +1,7 @@
 
 Feature:Browser - 'fullscreen, maximize, minimize and quit()' functions
 
-  Scenario: Login and play with the browser back and forth
+  Scenario: Login and play with the browser testing3
 
     Given driver 'https://karatelabs.github.io/karate/karate-core/'
     * delay(1000)
